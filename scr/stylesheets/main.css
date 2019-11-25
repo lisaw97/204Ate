@@ -1,0 +1,13 @@
+@import './reset.css';
+@import './grid.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+}
