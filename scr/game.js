@@ -9,6 +9,35 @@ export default class Game {
   }
 
   makeMove(direction) {
-    alert(`${direction} key pressed`);
+    this.grid.makeMove(direction);
+    this.grid.placeNewSymbol();
+    this.grid.print();
+    if (this.lost() || this.won()) {
+
+    }
+  }
+
+  lost() {
+    for (let row = 0; row < 4; row++) {
+      for (let col = 0; col < 4; col++) {
+        if (this.grid.grid[row][col] === " ") {
+          return false;
+        }
+      }
+    }
+    alert("Game Over");
+    return true;
+  }
+
+  won() {
+    for (let row = 0; row < 4; row++) {
+      for (let col = 0; col < 4; col++) {
+        if (this.grid.grid[row][col] === "🤰🏻") {
+          alert("You won!");
+          return true;
+        }
+      }
+    }
+    return false;
   }
 }
