@@ -1,7 +1,12 @@
 import Game from './scr/game';
+import Instructions from './scr/instructions';
 
-const canvas = document.getElementById("app");
+const app = document.getElementById("app");
+const canvas = document.getElementById("canvas");
 const game = new Game(canvas);
+const instructions = new Instructions();
+
+app.appendChild(instructions.container);
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {

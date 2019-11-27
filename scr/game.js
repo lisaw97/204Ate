@@ -13,7 +13,7 @@ export default class Game {
     this.grid.placeNewSymbol();
     this.grid.print();
     if (this.lost() || this.won()) {
-
+      this.openModal();
     }
   }
 
@@ -39,5 +39,9 @@ export default class Game {
       }
     }
     return false;
+  }
+
+  openModal() {
+    
   }
 }
