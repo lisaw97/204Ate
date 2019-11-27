@@ -1,4 +1,5 @@
 import Grid from './grid';
+import Modal from './modal';
 
 export default class Game {
   constructor(canvas) {
@@ -12,7 +13,7 @@ export default class Game {
     this.grid.placeNewSymbol();
     this.grid.print();
     if (this.lost() || this.won()) {
-      this.openModal();
+      // this.openModal();
     }
     this.displayScore();
   }
@@ -47,6 +48,6 @@ export default class Game {
   }
 
   openModal() {
-
+    const modal = new Modal();
   }
 }

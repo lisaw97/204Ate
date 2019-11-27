@@ -1,6 +1,7 @@
 import Game from './scr/game';
 import Instructions from './scr/instructions';
 import Scores from './scr/scores';
+import Modal from './scr/modal';
 
 // game
 const app = document.getElementById("app");
@@ -17,6 +18,12 @@ reset.addEventListener("click", () => {game = new Game(canvas)});
 // instructions 
 const instructions = new Instructions();
 app.appendChild(instructions.container);
+
+// modal
+const modal = new Modal();
+app.appendChild(modal.container);
+const modalReset = document.getElementById("modal-reset");
+modalReset.addEventListener("click", () => {game = new Game(canvas)});
 
 document.onkeydown = function(event) {
   switch (event.keyCode) {
