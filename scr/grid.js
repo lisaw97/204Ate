@@ -1,20 +1,23 @@
-const icons = [
-  "🦟",
-  "🕷",
-  "🐧",
-  "😸",
-  "🐶",
-  "🐮",
-  "🐴",
-  "🤰🏻"
-]
+const points = {
+  "🦟": 2,
+  "🕷": 4,
+  "🐧": 8,
+  "😸": 16,
+  "🐶": 32,
+  "🐮": 64,
+  "🐴": 128,
+  "🤰🏻": 256
+};
+
+const icons = Object.keys(points);
 
 export default class Grid {
-  constructor(canvas, ctx, dimensions) {
+  constructor(canvas) {
+    this.ctx = canvas.getContext("2d");
+    this.dimensions = { width: canvas.width, height: canvas.height };
     this.canvas = canvas;
-    this.ctx = ctx;
-    this.dimensions = dimensions;
     this.grid = this.makeGrid();
+    this.score = 0;
   }
 
   makeGrid() {
@@ -144,6 +147,7 @@ export default class Grid {
           icons[icons.indexOf(symbols[i]) + 1];
         newSymbols.push(newIcon);
         i += 2;
+        this.score += points[newIcon];
       } else {
         newSymbols.push(symbols[i]);
         i++;
@@ -169,6 +173,7 @@ export default class Grid {
         let newIcon = icons[icons.indexOf(symbols[i]) + 1];
         newSymbols.push(newIcon);
         i += 2;
+        this.score += points[newIcon];
       } else {
         newSymbols.push(symbols[i]);
         i++;

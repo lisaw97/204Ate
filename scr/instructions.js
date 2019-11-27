@@ -14,8 +14,5 @@ export default class Instructions {
     node.appendChild(textnode);
     this.container.appendChild(node);
   }
+
 }
-
-
-
-

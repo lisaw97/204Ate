@@ -2,10 +2,9 @@ import Grid from './grid';
 
 export default class Game {
   constructor(canvas) {
-    this.ctx = canvas.getContext("2d");
-    this.dimensions = { width: canvas.width, height: canvas.height };
-    this.grid = new Grid(canvas, this.ctx, this.dimensions);
+    this.grid = new Grid(canvas);
     this.grid.print();
+    this.displayScore();
   }
 
   makeMove(direction) {
@@ -15,6 +14,12 @@ export default class Game {
     if (this.lost() || this.won()) {
       this.openModal();
     }
+    this.displayScore();
+  }
+
+  displayScore() {
+    let currentScore = document.getElementById("currentScore");
+    if (currentScore) currentScore.innerText = `Score ${this.grid.score}`;
   }
 
   lost() {
@@ -42,6 +47,6 @@ export default class Game {
   }
 
   openModal() {
-    
+
   }
 }
