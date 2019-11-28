@@ -2,7 +2,7 @@ import Grid from './grid';
 import Modal from './modal';
 
 export default class Game {
-  constructor(canvas) {
+  constructor(canvas, modal) {
     this.grid = new Grid(canvas);
     this.grid.print();
     this.displayScore();
@@ -13,14 +13,14 @@ export default class Game {
     this.grid.placeNewSymbol();
     this.grid.print();
     if (this.lost() || this.won()) {
-      // this.openModal();
+      this.openModal();
     }
     this.displayScore();
   }
 
   displayScore() {
     let currentScore = document.getElementById("currentScore");
-    if (currentScore) currentScore.innerText = `Score ${this.grid.score}`;
+    if (currentScore) currentScore.innerText = `Score: ${this.grid.score}`;
   }
 
   lost() {
@@ -48,6 +48,6 @@ export default class Game {
   }
 
   openModal() {
-    const modal = new Modal();
+    modal.style.display = 'block';
   }
 }

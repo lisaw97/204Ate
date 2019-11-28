@@ -1,5 +1,8 @@
-canvas {
-  /* border: 2px solid black; */
-  /* background-color: grey; */
-  margin: 10px;
+#canvas {
+  width: 30%;
+  height: auto;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid black;
 }

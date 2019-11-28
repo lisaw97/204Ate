@@ -1,13 +1,38 @@
 @import './reset.css';
 @import './grid.css';
+@import './modal.css';
 
-body {
+#app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  background-color: rgb(225, 189, 91);
 }
+
 h1 {
   font-size: 30px;
   font-weight: bold;
+  margin: 20px;
+}
+
+#buttons {
+  display: flex;
+}
+
+#reset, #scores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
   margin: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+#instructions {
+  width: 60%;
+  font-size: 18px;
 }

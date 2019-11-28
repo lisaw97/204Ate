@@ -6,7 +6,8 @@ import Modal from './scr/modal';
 // game
 const app = document.getElementById("app");
 const canvas = document.getElementById("canvas");
-let game = new Game(canvas);
+const modal = new Modal();
+let game = new Game(canvas, modal);
 
 // scores
 new Scores();
@@ -20,11 +21,23 @@ const instructions = new Instructions();
 app.appendChild(instructions.container);
 
 // modal
-const modal = new Modal();
 app.appendChild(modal.container);
 const modalReset = document.getElementById("modal-reset");
-modalReset.addEventListener("click", () => {game = new Game(canvas)});
+// debugger
+modalReset.addEventListener("click", () => {
+  // debugger
+  let modal = document.getElementById("modal");
+  modal.style.display = 'none';
+  game = new Game(canvas, modal);
+});
 
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "block";
+//   }
+// }
+
+// detect arrow key press
 document.onkeydown = function(event) {
   switch (event.keyCode) {
     case 37:
