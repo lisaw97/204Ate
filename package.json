@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "webpack --watch --mode=development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,9 @@
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
+  },
+  "engines": {
+    "node": "12.9.1",
+    "npm": "6.10.2"
   }
 }

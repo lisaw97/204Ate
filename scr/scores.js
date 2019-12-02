@@ -9,6 +9,8 @@ export default class Scores {
   render() {
     let node = document.createElement("h3");
     node.id = "currentScore";
+    let textnode = document.createTextNode("Score: 0");
+    node.appendChild(textnode);
     this.container.appendChild(node);
   }
 }

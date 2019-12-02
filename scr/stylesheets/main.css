@@ -8,6 +8,7 @@
   align-items: center;
   height: 100vh;
   background-color: rgb(225, 189, 91);
+  font-family: 'Sulphur Point', sans-serif;
 }
 
 h1 {
@@ -17,7 +18,10 @@ h1 {
 }
 
 #buttons {
+  width: 30%;
   display: flex;
+  margin: auto;
+  justify-content: space-between;
 }
 
 #reset, #scores {
@@ -29,10 +33,30 @@ h1 {
   margin: 10px;
   font-size: 20px;
   border-radius: 8px;
-  border: 1px solid black;
+  border: 1px solid;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+#reset {
+  margin-left: 0;
+}
+
+#scores {
+  margin-right: 0;
 }
 
 #instructions {
   width: 60%;
   font-size: 18px;
+}
+
+#title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+#body {
+  margin-bottom: 20px;
 }

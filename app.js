@@ -23,19 +23,11 @@ app.appendChild(instructions.container);
 // modal
 app.appendChild(modal.container);
 const modalReset = document.getElementById("modal-reset");
-// debugger
 modalReset.addEventListener("click", () => {
-  // debugger
   let modal = document.getElementById("modal");
   modal.style.display = 'none';
   game = new Game(canvas, modal);
 });
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "block";
-//   }
-// }
 
 // detect arrow key press
 document.onkeydown = function(event) {

@@ -57,12 +57,13 @@ export default class Grid {
           this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X"
         );
         this.ctx.fillStyle = "red";
-        this.ctx.font = "30px Verdana"
+        
+        //size according to icon
+        this.ctx.font = "70px Verdana"
         this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx + 30, spacing * colIdx + 65);
       }
       symbols.push(`${row.join('|')}\n`);
     }
-    console.log(symbols.join('--------\n'));
   }
 
   placeNewSymbol() {
