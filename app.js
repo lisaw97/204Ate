@@ -5,7 +5,7 @@ import Modal from './scr/modal';
 
 // game
 const app = document.getElementById("app");
-
+console.log("hi");
 // instructions 
 const instructions = new Instructions();
 app.prepend(instructions.container);
