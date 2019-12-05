@@ -2,13 +2,26 @@ import Game from './scr/game';
 import Instructions from './scr/instructions';
 import Scores from './scr/scores';
 import Modal from './scr/modal';
+import { builtinModules } from 'module';
 
 // game
 const app = document.getElementById("app");
-console.log("hi");
+
 // instructions 
 const instructions = new Instructions();
 app.prepend(instructions.container);
+
+const video = document.getElementById("video");
+const mute = document.getElementById("mute");
+mute.addEventListener("click", () => {
+  if (video.paused) {
+    video.paused();
+    mute.innerHTML = "Mute";
+  } else {
+    video.pause();
+    mute.innerHTML = "Sound";
+  }
+})
 
 const canvas = document.getElementById("canvas");
 const modal = new Modal();

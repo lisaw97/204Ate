@@ -1,13 +1,8 @@
 #canvas {
-  width: 100%;
+  width: 90%;
   height: auto;
-  margin: auto;
   margin: 20px;
-  /* margin-top: 5px;
-  margin-bottom: 30px; */
-  /* background-color: white; */
-  /* opacity: 0.6; */
-  border: 1px solid;
-  padding: 10px;
+  background-color: greenyellow;
+  border: 5px solid black;
   box-shadow: 5px 10px 8px #888888;
 }

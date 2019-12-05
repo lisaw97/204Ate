@@ -31,7 +31,6 @@ export default class Game {
         }
       }
     }
-    alert("Game Over");
     return true;
   }
 
@@ -39,7 +38,6 @@ export default class Game {
     for (let row = 0; row < 4; row++) {
       for (let col = 0; col < 4; col++) {
         if (this.grid.grid[row][col] === "🤰🏻") {
-          alert("You won!");
           return true;
         }
       }
