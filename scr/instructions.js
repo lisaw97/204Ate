@@ -16,7 +16,7 @@ export default class Instructions {
     let body1 = document.createElement("p");
     body1.id = "body";
     let bodyText1 = document.createTextNode(
-      "Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!"
+      "Use your arrow keys to move the tiles. When two tiles with the same icons touch, they merge into one! Once the blocks combine to form an old lady, you win! The blocks merge in this order: 🦟 ,🕷, 🐧, 😸, 🐶, 🐮, 🐴, 🤰🏻"
     )
 
     let title2 = document.createElement("p");

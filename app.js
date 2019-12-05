@@ -5,6 +5,11 @@ import Modal from './scr/modal';
 
 // game
 const app = document.getElementById("app");
+
+// instructions 
+const instructions = new Instructions();
+app.prepend(instructions.container);
+
 const canvas = document.getElementById("canvas");
 const modal = new Modal();
 let game = new Game(canvas, modal);
@@ -16,9 +21,6 @@ new Scores();
 const reset = document.getElementById("reset");
 reset.addEventListener("click", () => {game = new Game(canvas)});
 
-// instructions 
-const instructions = new Instructions();
-app.appendChild(instructions.container);
 
 // modal
 app.appendChild(modal.container);

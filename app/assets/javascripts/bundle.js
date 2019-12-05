@@ -104,7 +104,10 @@ __webpack_require__.r(__webpack_exports__);
 
  // game
 
-var app = document.getElementById("app");
+var app = document.getElementById("app"); // instructions 
+
+var instructions = new _scr_instructions__WEBPACK_IMPORTED_MODULE_1__["default"]();
+app.prepend(instructions.container);
 var canvas = document.getElementById("canvas");
 var modal = new _scr_modal__WEBPACK_IMPORTED_MODULE_3__["default"]();
 var game = new _scr_game__WEBPACK_IMPORTED_MODULE_0__["default"](canvas, modal); // scores
@@ -114,10 +117,7 @@ new _scr_scores__WEBPACK_IMPORTED_MODULE_2__["default"](); // new game button
 var reset = document.getElementById("reset");
 reset.addEventListener("click", function () {
   game = new _scr_game__WEBPACK_IMPORTED_MODULE_0__["default"](canvas);
-}); // instructions 
-
-var instructions = new _scr_instructions__WEBPACK_IMPORTED_MODULE_1__["default"]();
-app.appendChild(instructions.container); // modal
+}); // modal
 
 app.appendChild(modal.container);
 var modalReset = document.getElementById("modal-reset");
@@ -527,7 +527,7 @@ function () {
       var titleText1 = document.createTextNode("HOW TO PLAY: ");
       var body1 = document.createElement("p");
       body1.id = "body";
-      var bodyText1 = document.createTextNode("Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!");
+      var bodyText1 = document.createTextNode("Use your arrow keys to move the tiles. When two tiles with the same icons touch, they merge into one! Once the blocks combine to form an old lady, you win! The blocks merge in this order: 🦟 ,🕷, 🐧, 😸, 🐶, 🐮, 🐴, 🤰🏻");
       var title2 = document.createElement("p");
       title2.id = "title";
       var titleText2 = document.createTextNode("ABOUT THIS GAME: ");

@@ -1,9 +1,12 @@
 #canvas {
-  width: 30%;
+  width: 100%;
   height: auto;
   margin: auto;
-  margin-top: 5px;
-  margin-bottom: 30px;
+  margin: 20px;
+  /* margin-top: 5px;
+  margin-bottom: 30px; */
+  /* background-color: white; */
+  /* opacity: 0.6; */
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px 8px #888888;
