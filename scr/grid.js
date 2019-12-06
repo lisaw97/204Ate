@@ -57,8 +57,8 @@ export default class Grid {
           this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X"
         );
         //size according to icon
-        this.ctx.font = "20px Verdana"
-        this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx, spacing * colIdx);
+        this.ctx.font = "50px Verdana"
+        this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx + 25, spacing * colIdx + 70);
       }
       symbols.push(`${row.join('|')}\n`);
     }

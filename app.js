@@ -2,7 +2,6 @@ import Game from './scr/game';
 import Instructions from './scr/instructions';
 import Scores from './scr/scores';
 import Modal from './scr/modal';
-import { builtinModules } from 'module';
 
 // game
 const app = document.getElementById("app");
