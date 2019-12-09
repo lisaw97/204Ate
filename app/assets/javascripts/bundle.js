@@ -99,6 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scr_instructions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scr/instructions */ "./scr/instructions.js");
 /* harmony import */ var _scr_scores__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scr/scores */ "./scr/scores.js");
 /* harmony import */ var _scr_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scr/modal */ "./scr/modal.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'module'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
 
 
 
@@ -108,6 +110,17 @@ var app = document.getElementById("app"); // instructions
 
 var instructions = new _scr_instructions__WEBPACK_IMPORTED_MODULE_1__["default"]();
 app.prepend(instructions.container);
+var video = document.getElementById("video");
+var mute = document.getElementById("mute");
+mute.addEventListener("click", function () {
+  if (video.paused) {
+    video.paused();
+    mute.innerHTML = "Mute";
+  } else {
+    video.pause();
+    mute.innerHTML = "Sound";
+  }
+});
 var canvas = document.getElementById("canvas");
 var modal = new _scr_modal__WEBPACK_IMPORTED_MODULE_3__["default"]();
 var game = new _scr_game__WEBPACK_IMPORTED_MODULE_0__["default"](canvas, modal); // scores
@@ -211,7 +224,6 @@ function () {
         }
       }
 
-      alert("Game Over");
       return true;
     }
   }, {
@@ -220,7 +232,6 @@ function () {
       for (var row = 0; row < 4; row++) {
         for (var col = 0; col < 4; col++) {
           if (this.grid.grid[row][col] === "🤰🏻") {
-            alert("You won!");
             return true;
           }
         }
@@ -325,11 +336,10 @@ function () {
         var row = [];
 
         for (var colIdx = 0; colIdx < 4; colIdx++) {
-          row.push(this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X");
-          this.ctx.fillStyle = "red"; //size according to icon
+          row.push(this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X"); //size according to icon
 
-          this.ctx.font = "70px Verdana";
-          this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx + 30, spacing * colIdx + 65);
+          this.ctx.font = "20px Verdana";
+          this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx, spacing * colIdx);
         }
 
         symbols.push("".concat(row.join('|'), "\n"));
