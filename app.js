@@ -14,12 +14,14 @@ const video = document.getElementById("video");
 
 const mute = document.getElementById("mute");
 mute.addEventListener("click", () => {
-  if (mute.innerText === "Mute") {
-    document.getElementById('video').src = "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c"
-    mute.innerText = "Unmute";
+  if (mute.className === "fas fa-volume-mute fa-2x") {
+    document.getElementById("video").src =
+      "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.className = "fas fa-volume-up fa-2x";
   } else {
-    document.getElementById("video").src = "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
-    mute.innerText = "Mute";
+    document.getElementById("video").src =
+      "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.className = "fas fa-volume-mute fa-2x";
   }
 })
 
