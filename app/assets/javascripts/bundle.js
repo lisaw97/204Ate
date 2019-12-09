@@ -111,12 +111,12 @@ app.prepend(instructions.container);
 var video = document.getElementById("video");
 var mute = document.getElementById("mute");
 mute.addEventListener("click", function () {
-  if (video.paused) {
-    video.paused();
-    mute.innerHTML = "Mute";
+  if (mute.innerText === "Mute") {
+    document.getElementById('video').src = "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.innerText = "Unmute";
   } else {
-    video.pause();
-    mute.innerHTML = "Sound";
+    document.getElementById("video").src = "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.innerText = "Mute";
   }
 });
 var canvas = document.getElementById("canvas");
