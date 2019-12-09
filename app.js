@@ -2,7 +2,6 @@ import Game from './scr/game';
 import Instructions from './scr/instructions';
 import Scores from './scr/scores';
 import Modal from './scr/modal';
-import { builtinModules } from 'module';
 
 // game
 const app = document.getElementById("app");
@@ -12,14 +11,17 @@ const instructions = new Instructions();
 app.prepend(instructions.container);
 
 const video = document.getElementById("video");
+
 const mute = document.getElementById("mute");
 mute.addEventListener("click", () => {
-  if (video.paused) {
-    video.paused();
-    mute.innerHTML = "Mute";
+  if (mute.className === "fas fa-volume-mute fa-2x") {
+    document.getElementById("video").src =
+      "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.className = "fas fa-volume-up fa-2x";
   } else {
-    video.pause();
-    mute.innerHTML = "Sound";
+    document.getElementById("video").src =
+      "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.className = "fas fa-volume-mute fa-2x";
   }
 })
 

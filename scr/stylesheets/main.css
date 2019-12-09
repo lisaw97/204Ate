@@ -5,13 +5,14 @@
 #app {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   height: 100vh;
-  font-family: 'Sulphur Point', sans-serif;\
+  font-family: 'Sulphur Point', sans-serif;
 }
 
 #video {
   position: fixed;
-  right: 0;
+  right: 0;x
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
@@ -24,17 +25,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40%;
   margin: 20px;
   height: 100%;
 }
 
 h1 {
   width: 100%;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   margin: 20px;
   text-align: center;
+  color: black;
+  text-shadow: 3px 0 greenyellow, 0 -1px greenyellow;
 }
 
 #buttons {
@@ -54,6 +57,7 @@ h1 {
   border-radius: 8px;
   border: 1px solid;
   box-shadow: 5px 10px 8px #888888;
+  background-color: greenyellow;
 }
 
 #reset {
@@ -65,13 +69,17 @@ h1 {
 }
 
 #instructions {
-  width: 20%;
-  height: 100%;
+  width: 35%;
+  height: 50%;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 20px;
+  background-color: greenyellow;
+  opacity: 0.8;
+  margin-top: 60px;
+  padding: 20px;
 }
 
 #title {
@@ -83,4 +91,17 @@ h1 {
 
 #body {
   margin-bottom: 20px;
+}
+
+button#mute {
+  border: 1px solid black;
+  background: greenyellow;
+  height: 50px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+button#mute:hover {
+    color: greenyellow;
+    background-color: black;
 }

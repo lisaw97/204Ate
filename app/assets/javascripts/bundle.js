@@ -99,8 +99,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scr_instructions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scr/instructions */ "./scr/instructions.js");
 /* harmony import */ var _scr_scores__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scr/scores */ "./scr/scores.js");
 /* harmony import */ var _scr_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scr/modal */ "./scr/modal.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'module'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-
 
 
 
@@ -113,12 +111,12 @@ app.prepend(instructions.container);
 var video = document.getElementById("video");
 var mute = document.getElementById("mute");
 mute.addEventListener("click", function () {
-  if (video.paused) {
-    video.paused();
-    mute.innerHTML = "Mute";
+  if (mute.className === "fas fa-volume-mute fa-2x") {
+    document.getElementById("video").src = "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.className = "fas fa-volume-up fa-2x";
   } else {
-    video.pause();
-    mute.innerHTML = "Sound";
+    document.getElementById("video").src = "https://www.youtube.com/embed/ApmEM9-xA2c?&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c";
+    mute.className = "fas fa-volume-mute fa-2x";
   }
 });
 var canvas = document.getElementById("canvas");
@@ -338,8 +336,8 @@ function () {
         for (var colIdx = 0; colIdx < 4; colIdx++) {
           row.push(this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X"); //size according to icon
 
-          this.ctx.font = "20px Verdana";
-          this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx, spacing * colIdx);
+          this.ctx.font = "50px Verdana";
+          this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx + 25, spacing * colIdx + 70);
         }
 
         symbols.push("".concat(row.join('|'), "\n"));
