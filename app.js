@@ -2,15 +2,18 @@ import Game from './scr/game';
 import Instructions from './scr/instructions';
 import Scores from './scr/scores';
 import Modal from './scr/modal';
-
+import Contacts from './scr/contacts';
 // game
 const app = document.getElementById("app");
 
 // instructions 
+const info = document.getElementById("info");
 const instructions = new Instructions();
-app.prepend(instructions.container);
+info.appendChild(instructions.container);
 
-const video = document.getElementById("video");
+// contacts 
+const contacts = new Contacts();
+info.appendChild(contacts.container);
 
 const mute = document.getElementById("mute");
 mute.addEventListener("click", () => {
@@ -50,15 +53,19 @@ modalReset.addEventListener("click", () => {
 document.onkeydown = function(event) {
   switch (event.keyCode) {
     case 37:
+      event.preventDefault();
       game.makeMove('left');
       break;
     case 38:
+      event.preventDefault();
       game.makeMove('up');
       break;
     case 39:
+      event.preventDefault();
       game.makeMove('right');
       break;
     case 40:
+      event.preventDefault();
       game.makeMove('down');
       break;
   }
