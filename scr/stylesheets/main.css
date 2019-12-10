@@ -8,14 +8,14 @@ html {
 }
 
 #nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: var(--theme-color);
-  display: flex;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
 }
 
 div#info {
@@ -65,13 +65,12 @@ div#info {
 }
 
 h1 {
-  width: 100%;
-  font-size: 50px;
-  font-weight: bold;
-  margin: 0px;
-  text-align: center;
-  color: black;
-  text-shadow: 3px 0 var(--theme-color), 0 -1px var(--theme-color);
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0px;
+    text-align: center;
+    color: var(--theme-color);
 }
 
 #buttons {
