@@ -13,22 +13,20 @@
   <script src="https://kit.fontawesome.com/df58c58326.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <div id="nav"><h1>Old Lady Game</h1></div>
   <div id="app">
+    <div id="info"></div>
     <div id="main">
-      <h1>Old Lady Game</h1>
+      <canvas id="canvas" height="400" width="400"></canvas>
+      <iframe id="video" type="text/html" width="640" height="360"
+      src="https://www.youtube.com/embed/ApmEM9-xA2c?enablejsapi=1&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div id="buttons">
         <button id="reset">New Game</button>
         <div id="scores"></div>
         <button id="mute" class="fas fa-volume-mute fa-2x"></button>
       </div>
-      <canvas id="canvas" height="400" width="400"></canvas>
-      <iframe id="video" type="text/html" width="640" height="360"
-        src="https://www.youtube.com/embed/ApmEM9-xA2c?enablejsapi=1&autoplay=1&loop=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=ApmEM9-xA2c"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      
-      
     </div>
   </div>
 </body>

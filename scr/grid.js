@@ -42,11 +42,13 @@ export default class Grid {
       this.ctx.beginPath();
       this.ctx.moveTo(0, spacing * i);
       this.ctx.lineTo(this.dimensions.width, spacing * i);
+      this.ctx.strokeStyle = '#000000 ';
       this.ctx.stroke();
 
       this.ctx.beginPath();
       this.ctx.moveTo(spacing * i, 0);
       this.ctx.lineTo(spacing * i, this.dimensions.height);
+      // this.ctx.strokeStyle = "#add8e6";
       this.ctx.stroke();
     }
 

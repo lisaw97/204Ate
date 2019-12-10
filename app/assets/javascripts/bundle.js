@@ -99,6 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scr_instructions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scr/instructions */ "./scr/instructions.js");
 /* harmony import */ var _scr_scores__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scr/scores */ "./scr/scores.js");
 /* harmony import */ var _scr_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scr/modal */ "./scr/modal.js");
+/* harmony import */ var _scr_contacts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scr/contacts */ "./scr/contacts.js");
+
 
 
 
@@ -106,9 +108,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var app = document.getElementById("app"); // instructions 
 
+var info = document.getElementById("info");
 var instructions = new _scr_instructions__WEBPACK_IMPORTED_MODULE_1__["default"]();
-app.prepend(instructions.container);
-var video = document.getElementById("video");
+info.appendChild(instructions.container); // contacts 
+
+var contacts = new _scr_contacts__WEBPACK_IMPORTED_MODULE_4__["default"]();
+info.appendChild(contacts.container);
 var mute = document.getElementById("mute");
 mute.addEventListener("click", function () {
   if (mute.className === "fas fa-volume-mute fa-2x") {
@@ -141,22 +146,78 @@ modalReset.addEventListener("click", function () {
 document.onkeydown = function (event) {
   switch (event.keyCode) {
     case 37:
+      event.preventDefault();
       game.makeMove('left');
       break;
 
     case 38:
+      event.preventDefault();
       game.makeMove('up');
       break;
 
     case 39:
+      event.preventDefault();
       game.makeMove('right');
       break;
 
     case 40:
+      event.preventDefault();
       game.makeMove('down');
       break;
   }
 };
+
+/***/ }),
+
+/***/ "./scr/contacts.js":
+/*!*************************!*\
+  !*** ./scr/contacts.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Contacts; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Contacts =
+/*#__PURE__*/
+function () {
+  function Contacts() {
+    _classCallCheck(this, Contacts);
+
+    this.container = document.createElement("div");
+    this.container.id = 'contacts';
+    this.render();
+  }
+
+  _createClass(Contacts, [{
+    key: "createLink",
+    value: function createLink(name, link) {
+      var contact = document.createElement("a");
+      contact.className = name;
+      contact.target = "_blank";
+      contact.href = link;
+      this.container.appendChild(contact);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      this.createLink("fab fa-github fa-3x", "https://github.com/lisaw97");
+      this.createLink("fas fa-envelope fa-3x", "mailto: lisawen0614@gmail.com");
+      this.createLink("fab fa-linkedin fa-3x", "https://www.linkedin.com/in/lisa-wen-006378133/");
+    }
+  }]);
+
+  return Contacts;
+}();
+
+
 
 /***/ }),
 
@@ -323,10 +384,12 @@ function () {
         this.ctx.beginPath();
         this.ctx.moveTo(0, spacing * i);
         this.ctx.lineTo(this.dimensions.width, spacing * i);
+        this.ctx.strokeStyle = '#000000 ';
         this.ctx.stroke();
         this.ctx.beginPath();
         this.ctx.moveTo(spacing * i, 0);
-        this.ctx.lineTo(spacing * i, this.dimensions.height);
+        this.ctx.lineTo(spacing * i, this.dimensions.height); // this.ctx.strokeStyle = "#add8e6";
+
         this.ctx.stroke();
       }
 
