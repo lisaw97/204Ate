@@ -50,6 +50,7 @@ modalReset.addEventListener("click", () => {
 });
 
 // detect arrow key press
+
 document.onkeydown = function(event) {
   switch (event.keyCode) {
     case 37:

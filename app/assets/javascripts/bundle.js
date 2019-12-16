@@ -260,8 +260,10 @@ function () {
       this.grid.placeNewSymbol();
       this.grid.print();
 
-      if (this.lost() || this.won()) {
-        this.openModal();
+      if (this.lost()) {
+        this.openModal("lost");
+      } else if (this.won()) {
+        this.openModal("won");
       }
 
       this.displayScore();
@@ -300,7 +302,12 @@ function () {
     }
   }, {
     key: "openModal",
-    value: function openModal() {
+    value: function openModal(status) {
+      if (status === "won") {
+        document.getElementsByTagName("h3")[1].innerText = 'You Win! 🤰🏼';
+        document.getElementById('modal-reset').innerText = 'Play Again';
+      }
+
       modal.style.display = 'block';
     }
   }]);
