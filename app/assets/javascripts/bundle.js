@@ -395,8 +395,7 @@ function () {
         this.ctx.stroke();
         this.ctx.beginPath();
         this.ctx.moveTo(spacing * i, 0);
-        this.ctx.lineTo(spacing * i, this.dimensions.height); // this.ctx.strokeStyle = "#add8e6";
-
+        this.ctx.lineTo(spacing * i, this.dimensions.height);
         this.ctx.stroke();
       }
 
@@ -404,8 +403,7 @@ function () {
         var row = [];
 
         for (var colIdx = 0; colIdx < 4; colIdx++) {
-          row.push(this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X"); //size according to icon
-
+          row.push(this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X");
           this.ctx.font = "50px Verdana";
           this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx + 25, spacing * colIdx + 70);
         }
@@ -495,15 +493,13 @@ function () {
   }, {
     key: "moveHorizontally",
     value: function moveHorizontally(row) {
-      //symbols array hold current symbols
       var symbols = [];
 
       for (var col = 0; col < 4; col++) {
         if (this.grid[row][col] != " ") {
           symbols.push(this.grid[row][col]);
         }
-      } //new symbols after combining
-
+      }
 
       var newSymbols = [];
       var i = 0;
@@ -525,15 +521,13 @@ function () {
   }, {
     key: "moveVertically",
     value: function moveVertically(col) {
-      //symbols array hold current symbols
       var symbols = [];
 
       for (var row = 0; row < 4; row++) {
         if (this.grid[row][col] != " ") {
           symbols.push(this.grid[row][col]);
         }
-      } //new symbols after combining
-
+      }
 
       var newSymbols = [];
       var i = 0;
@@ -702,9 +696,7 @@ function () {
   function Scores() {
     _classCallCheck(this, Scores);
 
-    this.container = document.getElementById("scores"); // this.container = document.createElement("div");
-    // this.container.id = "scores";
-
+    this.container = document.getElementById("scores");
     this.render();
   }
 

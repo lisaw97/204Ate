@@ -44,11 +44,9 @@ export default class Grid {
       this.ctx.lineTo(this.dimensions.width, spacing * i);
       this.ctx.strokeStyle = '#000000 ';
       this.ctx.stroke();
-
       this.ctx.beginPath();
       this.ctx.moveTo(spacing * i, 0);
       this.ctx.lineTo(spacing * i, this.dimensions.height);
-      // this.ctx.strokeStyle = "#add8e6";
       this.ctx.stroke();
     }
 
@@ -58,7 +56,6 @@ export default class Grid {
         row.push(
           this.grid[rowIdx][colIdx] ? this.grid[rowIdx][colIdx] : "X"
         );
-        //size according to icon
         this.ctx.font = "50px Verdana"
         this.ctx.fillText(this.grid[colIdx][rowIdx], spacing * rowIdx + 25, spacing * colIdx + 70);
       }
@@ -131,7 +128,6 @@ export default class Grid {
   }
 
   moveHorizontally(row) {
-    //symbols array hold current symbols
     let symbols = [];
     for (let col = 0; col < 4; col++) {
       if (this.grid[row][col] != " ") {
@@ -139,7 +135,6 @@ export default class Grid {
       }
     }
 
-    //new symbols after combining
     let newSymbols = [];
     let i = 0;
     while (i < symbols.length) {
@@ -158,7 +153,6 @@ export default class Grid {
   }
 
   moveVertically(col) {
-    //symbols array hold current symbols
     let symbols = [];
     for (let row = 0; row < 4; row++) {
       if (this.grid[row][col] != " ") {
@@ -166,7 +160,6 @@ export default class Grid {
       }
     }
 
-    //new symbols after combining
     let newSymbols = [];
     let i = 0;
     while (i < symbols.length) {

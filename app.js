@@ -3,6 +3,7 @@ import Instructions from './scr/instructions';
 import Scores from './scr/scores';
 import Modal from './scr/modal';
 import Contacts from './scr/contacts';
+
 // game
 const app = document.getElementById("app");
 
@@ -39,7 +40,6 @@ new Scores();
 const reset = document.getElementById("reset");
 reset.addEventListener("click", () => {game = new Game(canvas)});
 
-
 // modal
 app.appendChild(modal.container);
 const modalReset = document.getElementById("modal-reset");
@@ -50,7 +50,6 @@ modalReset.addEventListener("click", () => {
 });
 
 // detect arrow key press
-
 document.onkeydown = function(event) {
   switch (event.keyCode) {
     case 37:
