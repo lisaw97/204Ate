@@ -1,6 +1,6 @@
 # 204Ate
 
-[Live Demo](https://lisaw97.github.io/Old-Lady-Game/)
+[Live Demo](https://lisaw97.github.io/204Ate/)
 
 This game is is a single player sliding block game inspired by the game "2048" and the song "There Was an Old Lady Who Swallowed a Fly". The objective of the game is to slide blocks on grid and combine them till they form an old lady. The blocks follow the song and start out as flies, then spiders, bird, cat, dog, and so on, until it becomes a lady.
 
