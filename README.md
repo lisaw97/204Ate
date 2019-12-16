@@ -4,13 +4,13 @@
 
 This game is is a single player sliding block game inspired by the game "2048" and the song "There Was an Old Lady Who Swallowed a Fly". The objective of the game is to slide blocks on grid and combine them till they form an old lady. The blocks follow the song and start out as flies, then spiders, bird, cat, dog, and so on, until it becomes a lady.
 
-![Game](/scr/media/game.gif)
-
 ## Architecture and Technologies
 
 **HTML, CSS, Javascript, CanvasJS**
 
 This game utilizes `JavaScript` for its game logic and `HTML`, `CSS` and `CanvasJS` for purposes of rendering.
+
+![Game](/scr/media/game.gif)
 
 ## Features
 
