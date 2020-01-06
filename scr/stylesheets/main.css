@@ -32,6 +32,7 @@ div#info {
   justify-content: space-evenly;
   height: 100vh;
   font-family: 'Sulphur Point', sans-serif;
+  background-color: black;
 }
 
 #canvas {
@@ -50,8 +51,9 @@ div#info {
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
-  opacity: 0.5;
-  z-index: -2;
+  /* opacity: 0.5;
+  z-index: -2; */
+  visibility: hidden;
 }
 
 #main {
@@ -59,7 +61,7 @@ div#info {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  /* width: 60%; */
   margin: 20px;
   height: 100%;
 }
@@ -115,7 +117,7 @@ h1 {
     color: var(--theme-color);
     padding: 20px;
     border: 1px solid black;
-    box-shadow: 5px 10px 8px #888888;
+    /* box-shadow: 5px 10px 8px #888888; */
 }
 
 #title {
