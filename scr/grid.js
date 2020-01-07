@@ -6,7 +6,7 @@ const points = {
   "🐶": 32,
   "🐮": 64,
   "🐴": 128,
-  "🤰🏻": 256
+  "👵🏻": 256
 };
 
 const icons = Object.keys(points);

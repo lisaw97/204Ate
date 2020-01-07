@@ -22,12 +22,12 @@
     height: 300px;
     text-align: center;
     background-color: black;
-    box-shadow: 5px 10px 8px greenyellow;
+    box-shadow: 5px 10px 8px var(--theme-color);
 }
 
 #modal-content h3 {
     font-size: 50px;
-    color: greenyellow;
+    color: var(--theme-color);
     font-weight: bold;
 }
 
@@ -36,7 +36,7 @@ button#modal-reset {
     width: 300px;
     font-size: 25px;
     border-radius: 8px;
-    background-color: greenyellow;
+    background-color: var(--theme-color);
     border: 1px solid black;
     box-shadow: 3px 2px 8px #888888;
 }

@@ -16,7 +16,7 @@ export default class Instructions {
     let body1 = document.createElement("p");
     body1.id = "body";
     let bodyText1 = document.createTextNode(
-      "Use your arrow keys to move the tiles. When two tiles with the same icons touch, they merge into one! Once the blocks combine to form an old lady, you win! The blocks merge in this order: 🦟 ,🕷, 🐧, 😸, 🐶, 🐮, 🐴, 🤰🏻"
+      "Use your arrow keys to move the tiles. When two tiles with the same icons touch, they merge into one! Once the blocks combine to form an old lady, you win! The blocks merge in this order: 🦟 ,🕷, 🐧, 😸, 🐶, 🐮, 🐴, 👵🏻"
     )
 
     let title2 = document.createElement("p");
@@ -28,7 +28,7 @@ export default class Instructions {
     let body2 = document.createElement("p");
     body2.id = "body";
     let bodyText2 = document.createTextNode(
-      "This game is is a single player sliding block game inspired by the game 2048 and the song There was an old lady... The objective of the game is to slide blocks on grid and combine them till they form an old lady. The blocks start out as flies, then spiders, bird, cat, dog, and so on, until it becomes a lady. 🦟 ,🕷, 🐧, 😸, 🐶, 🐮, 🐴, 🤰🏻"
+      "This game is is a single player sliding block game inspired by the game 2048 and the song There was an old lady... The objective of the game is to slide blocks on grid and combine them till they form an old lady. The blocks start out as flies, then spiders, bird, cat, dog, and so on, until it becomes a lady. 🦟 ,🕷, 🐧, 😸, 🐶, 🐮, 🐴, 👵🏻"
     )
 
     title1.appendChild(titleText1);

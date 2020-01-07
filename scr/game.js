@@ -1,5 +1,4 @@
 import Grid from './grid';
-import Modal from './modal';
 
 export default class Game {
   constructor(canvas, modal) {
@@ -49,7 +48,7 @@ export default class Game {
 
   openModal(status) {
     if (status === "won") {
-      document.getElementsByTagName("h3")[1].innerText = 'You Win! 🤰🏼';
+      document.getElementsByTagName("h3")[1].innerText = '👵🏻 You Win! 👵🏻';
       document.getElementById('modal-reset').innerText = 'Play Again';
     } 
     modal.style.display = 'block';
