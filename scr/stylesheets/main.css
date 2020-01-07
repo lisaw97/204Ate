@@ -4,7 +4,7 @@
 @import './modal.css';
 
 html {
-  --theme-color: lightblue;
+  --theme-color: rgb(255, 255, 0);
 }
 
 #nav {
@@ -39,7 +39,7 @@ div#info {
     width: 500px;
     height: 500px;
     margin: 20px;
-    background-color: lightblue;
+    background-color: var(--theme-color);
     opacity: 0.85;
     border: 1px solid black;
     box-shadow: 5px 10px 8px #888888;
@@ -104,6 +104,12 @@ h1 {
   margin-right: 0;
 }
 
+#reset:hover, #scores:hover {
+  background-color: var(--theme-color);
+  color: black;
+  cursor: pointer;
+}
+
 #instructions {
     width: auto;
     height: 467px;
@@ -125,12 +131,12 @@ h1 {
   font-weight: bold;
   margin-bottom: 15px;
   text-decoration: underline;
+  padding: 10px;
 }
 
 #body {
     margin-bottom: 50px;
-    background-color: var(--theme-color);
-    color: black;
+    color: var(--theme-color);
     padding: 10px;
 }
 
@@ -145,6 +151,7 @@ button#mute {
     margin: 10px;
     box-shadow: 5px 10px 8px #888888;
     border: 1px solid var(--theme-color);
+    cursor: pointer;
 }
 
 button#mute:hover {
